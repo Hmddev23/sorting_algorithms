@@ -45,7 +45,7 @@ int hoare_partition(int *array, size_t size, int left, int right)
 
 		if (up < down)
 		{
-			swap_ints(array + up, array + down);
+			swap_nmbrs(array + up, array + down);
 			print_array(array, size);
 		}
 	}
