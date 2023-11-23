@@ -31,7 +31,7 @@ void swap_nmbrs(int *a, int *b)
   */
 
 void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
-char flow)
+		char flow)
 {
 	size_t idx, jmp = seq / 2;
 
@@ -60,7 +60,8 @@ char flow)
   * Return: Nothing.
   */
 
-void bitonic_sequence(int *array, size_t size, size_t start, size_t seq, char flow)
+void bitonic_sequence(int *array, size_t size, size_t start, size_t seq,
+		char flow)
 {
 	size_t cutter = seq / 2;
 	char *strng = (flow == UP) ? "UP" : "DOWN";
