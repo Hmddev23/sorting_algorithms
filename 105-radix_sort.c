@@ -23,7 +23,7 @@ int get_maximum(int *array, int size)
 }
 
 /**
-  * counting_sort - Sort an array using the counting sort algorithm.
+  * counting_sort_radix - Sort an array using the counting sort algorithm.
   *
   * @array: Array to sort.
   * @size: Size of the array.
@@ -33,7 +33,7 @@ int get_maximum(int *array, int size)
   * Return: Nothing.
   */
 
-void counting_sort(int *array, size_t size, int sig, int *buff)
+void counting_sort_radix(int *array, size_t size, int sig, int *buff)
 {
 	int count[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	size_t i;
@@ -77,7 +77,7 @@ void radix_sort(int *array, size_t size)
 	maximum = get_maximum(array, size);
 	for (sig = 1; maximum / sig > 0; sig *= 10)
 	{
-		counting_sort(array, size, sig, buff);
+		counting_sort_radix(array, size, sig, buff);
 		print_array(array, size);
 	}
 
